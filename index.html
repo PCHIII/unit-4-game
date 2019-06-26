@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collector Game</title>
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <div class="container p-5"> 
+                
+
+    <div class="container-fluid bg-transparent p-2">
+
+        
+        <div class="container-fluid rounded bg-dark text-center mb-4">
+            <div class="col-md-12 p-3">
+            <h1>Crystal Collector</h1>
+        </div></div>
+    
+
+        <div class="container rounded bg-success mb-4" style="">
+            <div class="col-md-12 p-3">
+                <h3>Instructions:</h3>
+                <p>A random number is generated and shown.  Each Gemstone also gets a random number value.  Your goal is to select Gemstones until the total sum matches the random number generated.  If you go over, you lose, if you match it you win.</p>  
+                <p>HINT: Try to determine the value of each gemstone and select the right ones that add up perfectly. </p>
+                
+            </div>
+        </div>
+
+
+        <div class="containter rounded bg-dark">
+        <div class="d-flex justify-content-around" style="">
+            
+            <div class="container d-flex justify-content-around p-2">
+            
+                <h3>Number to Match:</h3>
+                <h2 id="numberToMatch"></h2>
+            </div>
+
+            <div class="container d-flex justify-content-around p-2">
+            
+                <h3>Current Score:</h3>
+                <h2 id="currentScore">0</h2>
+            </div>
+
+        </div>
+
+            
+        <div class="container d-flex justify-content-around bg-transparent">
+        <div class="row" style="">
+
+            <div class="col-md-3">
+                <img src="assets/images/champagne.jpg" alt="crystal 1" class="img-thumbnail rounded" id="crystal1">
+            </div>
+
+            <div class="col-md-3">
+                <img src="assets/images/emerald-green.jpg" alt="crystal 2" class="img-thumbnail rounded" id="crystal2">
+            </div>
+
+            <div class="col-md-3">
+                <img src="assets/images/emerald-blue.jpg" alt="crystal 3" class="img-thumbnail rounded" id="crystal3">
+            </div>
+
+            <div class="col-md-3">
+                <img src="assets/images/ruby.jpg" alt="crystal 4" class="img-thumbnail rounded" id="crystal4">
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="d-flex">
+            <div class="container d-flex justify-content-around p-3">
+                <h5 id="wins">Wins: </h5>
+            </div>  
+            <div class="container d-flex justify-content-around p-3">     
+                <h5 id="losses">Losses: </h5>
+                </div>
+        </div>
+
+    </div>
+    </div>
+</div> 
+    <script type="text/javascript" src="game.js"></script>
+
+</body>
+</html>
