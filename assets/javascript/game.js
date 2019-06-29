@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     // hint button
     $("button").one('click', function () {
-        $("#container").append(" Determine the number value of each gemstone and select the right combination that adds up exactly equal to the Random Number.");
+        $("#container").append("Click on each Gemstone first to determine their number value, after that its just simple addition!!");
     });
 
     // Variables
@@ -29,33 +29,29 @@ $(document).ready(function () {
     var crystal4 = Math.floor(Math.random() * 12) + 1;
 
     // Generate computerNumber between 90-120; ad to computer number.
-
     function getNumber() {
         computerNumber = Math.floor(Math.random() * 31) + 90;
         $("#computerNumber").html(computerNumber);
-        // console.log("number to match: " + computerNumber);
+        
     };
-    // Functions
+
     // Restart Game, reset number values
     // update score and regenerate random numbers for crystals 1-12
     function restartGame() {
-
+        crystal1 = Math.floor(Math.random() * 12) + 1;
+        crystal2 = Math.floor(Math.random() * 12) + 1;
+        crystal3 = Math.floor(Math.random() * 12) + 1;
+        crystal4 = Math.floor(Math.random() * 12) + 1;
         userScore = 0;
         getNumber();
         updateScore();
+        $("#alert").html("")
     };
-
 
     // Update the playersNumber index.html with userScore value
     function updateScore() {
         $("#userScore").html(userScore);
 
-        // if (userScore === computerNumber) {
-        //     youWin();
-        // }
-        // if (userScore > computerNumber) {
-        //     youLose();
-        // }
     };
 
     // win = add win, update score, alert, start new game
@@ -63,8 +59,11 @@ $(document).ready(function () {
         updateScore();
         wins++;
         $("#wins").html("Wins: " + wins);
-        alert("You win!");
-        restartGame();
+        $("#alert").html("YOU WIN!!")
+        setTimeout(restartGame, 3000);
+        // $("#alert").hide(3000);
+        // alert("You win!");
+        // restartGame();
     };
 
     // lose = add loss, update score, alert, restart game
@@ -72,21 +71,24 @@ $(document).ready(function () {
         updateScore();
         losses++;
         $("#losses").html("Losses: " + losses);
-        alert("Sorry, Try Again");
-        restartGame();
+        $("#alert").html("SORRY TRY AGAIN")
+        setTimeout(restartGame, 3000);
+        // $("#alert").hide(3000);
+        // alert("Sorry, Try Again");
+        // restartGame();
     };
+    
 
     // Click function - Generate crystal1 value
     $("#crystal1").click(function () {
         userScore += crystal1;
         updateScore();
 
-        // define win; push to #wins
-        // define loss; push to #losses
+        // define win; push to #wins...define loss; push to #losses
         if (userScore === computerNumber) {
             youWin();
         }
-        if (userScore > computerNumber) {
+        else if (userScore > computerNumber) {
          youLose();
         }
     });
@@ -96,12 +98,11 @@ $(document).ready(function () {
         userScore += crystal2;
         updateScore();
 
-        // define win; push to #wins
-        // define loss; push to #losses
+        // define win; push to #wins define loss; push to #losses
         if (userScore === computerNumber) {
             youWin();
          }
-        if (userScore > computerNumber) {
+        else if (userScore > computerNumber) {
             youLose();
         }
     });
@@ -111,12 +112,11 @@ $(document).ready(function () {
         userScore += crystal3;
         updateScore();
 
-        // define win; push to #wins
-        // define loss; push to #losses
+        // define win; push to #wins..define loss; push to #losses
          if (userScore === computerNumber) {
              youWin();
          }
-         if (userScore > computerNumber) {
+         else if (userScore > computerNumber) {
              youLose();
          }
     });
@@ -126,12 +126,11 @@ $(document).ready(function () {
         userScore += crystal4;
         updateScore();
 
-        //  define win; push to #wins
-        //  define loss; push to #losses
+        //  define win; push to #wins...define loss; push to #losses
          if (userScore === computerNumber) {
              youWin();
          }
-         if (userScore > computerNumber) {
+         else if (userScore > computerNumber) {
              youLose();
          }
     });
