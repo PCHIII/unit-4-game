@@ -18,12 +18,12 @@ h1 {
     font-size: 85px;
     font-family: 'Kaushan Script', cursive;
     font-weight: bold;
-    /* -webkit-box-shadow: -1px 5px 19px 5px rgba(255,255,255,0.65), -1px 5px 19px 5px rgba(189, 77, 189, 0.65);  */
+    
 }
 
 img:hover {
 
-        border:5px solid white;
+        border:6px solid white;
     
 }
 

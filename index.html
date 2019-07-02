@@ -15,7 +15,6 @@
 </head>
 <body>
     <div class="container mt-4">
-        <!-- <div class="container-fluid bg-transparent p-2"> -->
         <div class="container rounded bg-dark text-center mb-3">
             <div class="col-md-12 p-4"> 
                 <h1>Crystal Collector</h1>
@@ -25,12 +24,10 @@
             <div class="col-md-12 p-2">
                 <h3>Instructions:</h3>
                 <div id="container">
-                <p>A random number is generated and shown. Each Gemstone also gets a random number value. Your goal is
+                <p>A random number is generated between 90-120. Each Gemstone also gets a random number between 1-12. Your goal is
                     to select Gemstones until the total sum matches the random number generated. If you go over, you lose, if you match it you win.</p>
-
                     <button type="button" class="btn btn-outline-dark mb-2 mr-2">HINT</button>
                 </div>
-                
             </div> 
         </div>
         <div class="container rounded bg-dark">
@@ -67,7 +64,7 @@
                 <div class="container d-flex justify-content-around p-3">
                     <h5 id="wins">Wins: </h5>
                 </div>
-                <div class="container d-flex justify-content-around p-3">
+                <div class="container d-flex justify-content-around pt-3">
                     <h4 id="alert"></h4>
                 </div>
                 <div class="container d-flex justify-content-around p-3">
@@ -76,7 +73,7 @@
             </div>
         </div>
     </div>
-    <!-- </div>  -->
+    
     <script type="text/javascript" src="assets/javascript/game.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
